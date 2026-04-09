@@ -57,17 +57,19 @@ Supports three keyboard layouts: English QWERTY (with word suggestions), keyboar
 
 ## Architecture
 
-- **Core**: `Air_Keyboard.py`
-  - Hand landmark detection via MediaPipe
-  - Gesture distance calculation for click detection
-  - Virtual keyboard rendering with OpenCV
-  - Word suggestions via wordfreq library
-  - OS integration via pyautogui for keyboard simulation
-  - Audio feedback with playsound
-- **Input**: Webcam feed via OpenCV
-- **Output**: System keyboard events and visual keyboard overlay
+- **Core**: `Air_Keyboard.py` (Main runner script)
+- **Source Code**: `src/`
+  - `main.py`: Application entry point and main loop.
+  - `hand_tracker.py`: Handles MediaPipe hand landmark detection and distance calculation.
+  - `keyboard_ui.py`: Manages OpenCV-based virtual keyboard rendering and layout logic.
+  - `input_handler.py`: Interface for OS keyboard simulation and audio feedback.
+  - `suggestion_engine.py`: Logic for English word predictions using frequency data.
+  - `config.py`: Global constants, keyboard layouts, and configuration settings.
+- **Assets**: `assets/` (For sounds and other static files)
+- **Dependencies**: `requirements.txt`
+- **Git**: `.gitignore` (Standard Python project exclusions)
 
-No backend, no frontend—single executable Python script.
+No backend, no frontend—modular Python application.
 
 ## Getting started
 

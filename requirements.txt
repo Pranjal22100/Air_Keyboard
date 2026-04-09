@@ -1,0 +1,5 @@
+opencv-python
+mediapipe
+pyautogui
+playsound==1.2.2
+wordfreq
